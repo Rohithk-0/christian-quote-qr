@@ -1,77 +1,67 @@
-/* 🌄 Page Background & Base Styling */
 body {
-    background: url('https://images.unsplash.com/photo-1588461714847-04f212331b4d?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background: #000;
     background-size: cover;
-    font-family: 'Segoe UI', sans-serif;
+    background-position: center;
+    font-family: 'EB Garamond', serif;
+    color: white;
     margin: 0;
     padding: 0;
-    color: white;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   
-  /* 🕊️ Central Container */
-  .container {
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
+  .container, .content-box {
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
-    width: 90%;
-    max-width: 500px;
-    margin: 100px auto 0 auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    margin: 20px;
   }
   
-  /* ✏️ Input Field */
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .verse {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    opacity: 0.85;
+  }
+  
   input {
     padding: 10px;
-    font-size: 18px;
+    font-size: 1.2rem;
     width: 80%;
-    margin-top: 10px;
-    border-radius: 5px;
+    margin: 10px 0;
     border: none;
+    border-radius: 8px;
   }
   
-  /* ✅ Submit Button */
   button {
     padding: 10px 20px;
-    font-size: 18px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
+    font-size: 1rem;
+    background-color: #ffffff33;
     color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 15px;
   }
   
   button:hover {
-    background-color: #3e8e41;
-  }
-  
-  /* 📜 Quote & Verse Display */
-  #quoteBox, #verseBox, .output-section {
-    margin-top: 20px;
-    font-style: italic;
-    font-size: 1rem;
-    color: #f0f0f0;
-  }
-  
-  /* 🕊️ Bible Verse Styling */
-  .verse-box {
-    font-size: 0.95rem;
-    margin-top: 10px;
-    opacity: 0.85;
-    color: #f0f0f0;
-  }
-  
-  /* ✝️ Optional Icon (If Used) */
-  .cross-icon {
-    font-size: 40px;
-    color: #e0c2ff;
+    background-color: #ffffff55;
   }
   
   .glow-cross {
     font-size: 50px;
-    color: #ffffff;
     text-shadow:
       0 0 5px #8e44ad,
       0 0 10px #8e44ad,
@@ -83,15 +73,10 @@ body {
   
   @keyframes glow {
     from {
-      text-shadow:
-        0 0 5px #8e44ad,
-        0 0 10px #8e44ad;
+      text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad;
     }
     to {
-      text-shadow:
-        0 0 20px #8e44ad,
-        0 0 40px #8e44ad,
-        0 0 60px #9b59b6;
+      text-shadow: 0 0 20px #8e44ad, 0 0 40px #8e44ad, 0 0 60px #9b59b6;
     }
   }
   
