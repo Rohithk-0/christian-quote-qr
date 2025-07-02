@@ -10,10 +10,10 @@ const quotes_en = [
   ];
   
   const backgrounds = [
-    "https://source.unsplash.com/1600x900/?cross",
-    "https://source.unsplash.com/1600x900/?church",
-    "https://source.unsplash.com/1600x900/?bible",
-    "https://source.unsplash.com/1600x900/?jesus"
+    "https://unsplash.com/photos/brown-wooden-cross-on-brown-rock-near-green-mountains-under-blue-sky-and-white-clouds-during-7Khwr4mkhNQ",
+    "https://unsplash.com/photos/shallow-focus-photography-of-hand-and-people-RAZQiZOX3mU",
+    "https://unsplash.com/photos/shallow-focus-photo-of-book-on-brown-wooden-table-H6gTVBETAI4",
+    "https://unsplash.com/photos/hands-of-an-unrecognizable-woman-with-bible-praying-M_iqJHlus8A"
   ];
   
   // 🌄 Set Random Background
