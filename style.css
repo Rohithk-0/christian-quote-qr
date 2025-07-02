@@ -1,21 +1,26 @@
+/* 🌄 Page Background & Base Styling */
 body {
-    background: url('https://source.unsplash.com/1600x900/?cross,sunlight,bible') no-repeat center center fixed;
+    background: url('https://images.unsplash.com/photo-1588461714847-04f212331b4d?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
     color: white;
     text-align: center;
-    padding: 50px;
   }
   
+  /* 🕊️ Central Container */
   .container {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     padding: 30px;
-    display: inline-block;
     width: 90%;
     max-width: 500px;
+    margin: 100px auto 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
   
+  /* ✏️ Input Field */
   input {
     padding: 10px;
     font-size: 18px;
@@ -25,6 +30,7 @@ body {
     border: none;
   }
   
+  /* ✅ Submit Button */
   button {
     padding: 10px 20px;
     font-size: 18px;
@@ -34,9 +40,58 @@ body {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .output-section {
-    margin-top: 30px;
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* 📜 Quote & Verse Display */
+  #quoteBox, #verseBox, .output-section {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1rem;
+    color: #f0f0f0;
+  }
+  
+  /* 🕊️ Bible Verse Styling */
+  .verse-box {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    opacity: 0.85;
+    color: #f0f0f0;
+  }
+  
+  /* ✝️ Optional Icon (If Used) */
+  .cross-icon {
+    font-size: 40px;
+    color: #e0c2ff;
+  }
+  
+  .glow-cross {
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow:
+      0 0 5px #8e44ad,
+      0 0 10px #8e44ad,
+      0 0 20px #8e44ad,
+      0 0 40px #8e44ad;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow:
+        0 0 5px #8e44ad,
+        0 0 10px #8e44ad;
+    }
+    to {
+      text-shadow:
+        0 0 20px #8e44ad,
+        0 0 40px #8e44ad,
+        0 0 60px #9b59b6;
+    }
   }
   

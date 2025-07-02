@@ -5,18 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Faithful Motivation</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome, Child of God ✝️</h1>
-    <p>Enter your name below to receive a word of encouragement</p>
+  <!-- 🔊 Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3" />
+    Your browser does not support the audio tag.
+  </audio>
 
-    <input type="text" id="username" placeholder="Your name" />
-    <button onclick="generateQuote()">Submit</button>
-
-    <div id="output" class="output-section"></div>
+  <!-- 🌐 Language Toggle -->
+  <div style="text-align: center; margin: 15px;">
+    <label>
+      <input type="checkbox" id="langToggle" /> <strong>தமிழ் / Tamil</strong>
+    </label>
   </div>
 
+  <div class="container">
+    <div class="glow-cross">✝</div>
+    <h1>Welcome, Child of God ✝️</h1>
+    <div class="cross-icon"><i class="bi bi-cross"></i></div>
+    <p>Enter your name below to receive a word of encouragement</p>
+
+    <!-- 🙏 Username Form -->
+    <form id="usernameForm">
+      <input type="text" id="username" placeholder="Your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ✨ Output Section -->
+    <div id="outputBox">
+      <div id="quoteBox"></div>
+      <div id="verseBox" class="verse-box"></div>
+    </div>
+
+    <!-- 📥 Download & Share -->
+    <button onclick="downloadQuote()">Download Quote as Image</button>
+    <button onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+  </div>
+
+  <!-- 🧠 Script Files -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
