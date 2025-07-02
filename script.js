@@ -9,15 +9,23 @@ const quotes_en = [
     "{{name}}, நீ அற்புதமாக உருவாக்கப்பட்டவனாக இருக்கிறாய் – சங்கீதம் 139:14"
   ];
   
-  const backgrounds = [
-    "https://unsplash.com/photos/brown-wooden-cross-on-brown-rock-near-green-mountains-under-blue-sky-and-white-clouds-during-7Khwr4mkhNQ",
-    "https://unsplash.com/photos/shallow-focus-photography-of-hand-and-people-RAZQiZOX3mU",
-    "https://unsplash.com/photos/shallow-focus-photo-of-book-on-brown-wooden-table-H6gTVBETAI4",
-    "https://unsplash.com/photos/hands-of-an-unrecognizable-woman-with-bible-praying-M_iqJHlus8A"
+  // Backgrounds (local paths)
+const backgrounds = [
+    "images/image1.jpg",
+    "images/image2.jpg",
+    "images/image3.jpg",
+    "images/image4.jpg",
+    "images/image5.jpg",
+    "images/image6.jpg",
+    "images/image7.jpg"
   ];
   
   // 🌄 Set Random Background
   document.body.style.backgroundImage = `url('${backgrounds[Math.floor(Math.random() * backgrounds.length)]}')`;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.backgroundRepeat = "no-repeat";
+  
   
   // ✨ Parse Name and Language
   const params = new URLSearchParams(window.location.search);
