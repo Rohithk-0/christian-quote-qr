@@ -1,24 +1,43 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Faithful Motivation ✝️</title>
+  <title>Faithful Motivation</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- 🔊 Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3" />
+    Your browser does not support the audio tag.
+  </audio>
+
   <div class="container">
     <div class="glow-cross">✝</div>
-    <h1>Welcome, Child of God</h1>
-    <p>Enter your name below to receive your word of encouragement</p>
+    <h1>Faithful Motivation</h1>
 
+    <!-- 🌐 Language Toggle -->
+    <label>
+      <input type="checkbox" id="langToggle"> <strong>தமிழ் / Tamil</strong>
+    </label>
+
+    <!-- 🙏 Enter Name -->
     <form id="usernameForm">
-      <input type="text" id="username" placeholder="Your name" required />
+      <input type="text" id="username" placeholder="Enter your name" required />
       <button type="submit">Submit</button>
     </form>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("usernameForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("username").value;
+      const isTamil = document.getElementById("langToggle").checked;
+      const lang = isTamil ? "ta" : "en";
+      window.location.href = `motivate.html?name=${encodeURIComponent(name)}&lang=${lang}`;
+    });
+  </script>
 </body>
 </html>
