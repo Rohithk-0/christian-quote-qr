@@ -1,0 +1,52 @@
+<!-- motivate.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Motivation ✝️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="content-box">
+    <h1 id="quote">Loading...</h1>
+    <p class="verse" id="verse">Loading verse...</p>
+    <button onclick="window.location.href='index.html'">🔁 Try Another</button>
+  </div>
+
+  <script>
+    const backgrounds = [
+      'https://source.unsplash.com/1600x900/?cross',
+      'https://source.unsplash.com/1600x900/?church',
+      'https://source.unsplash.com/1600x900/?bible',
+      'https://source.unsplash.com/1600x900/?light,jesus',
+      'https://source.unsplash.com/1600x900/?hope,christian'
+    ];
+    document.body.style.backgroundImage = `url(${backgrounds[Math.floor(Math.random() * backgrounds.length)]})`;
+
+    const name = localStorage.getItem("userName") || "Beloved";
+
+    const quotes = [
+      "{{name}}, God is within you, you will not fall. – Psalm 46:5",
+      "Be strong and courageous, {{name}}. Do not be afraid – Joshua 1:9",
+      "{{name}}, you are fearfully and wonderfully made – Psalm 139:14",
+      "{{name}}, trust in the Lord with all your heart – Proverbs 3:5",
+      "Let your light shine before others, {{name}} – Matthew 5:16",
+      "{{name}}, nothing is impossible with God – Luke 1:37"
+    ];
+    const quote = quotes[Math.floor(Math.random() * quotes.length)].replace("{{name}}", name);
+    document.getElementById("quote").innerText = quote;
+
+    fetch("https://beta.ourmanna.com/api/v1/get/?format=json")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("verse").innerText =
+          `"${data.verse.details.text}" — ${data.verse.details.reference}`;
+      })
+      .catch(() => {
+        document.getElementById("verse").innerText = "❌ Couldn't load verse. Try again.";
+      });
+  </script>
+</body>
+</html>
